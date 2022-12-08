@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="TrialAntProject" default="package" basedir=".">
+<!-- <project name="TrialAntProject" default="package" basedir="."> -->
 
   <!-- ====================================================================== -->
   <!-- Import maven-build.xml into the current project                        -->
@@ -15,4 +15,4 @@
   <target name="help">
     <echo message="Please run: $ant -projecthelp"/>
   </target>
-</project>
+<!-- </project> -->
