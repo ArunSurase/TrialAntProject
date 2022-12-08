@@ -27,7 +27,7 @@
   <property name="maven.build.finalName" value="TrialAntProject"/>
   <property name="maven.build.dir" value="target"/>
   <property name="maven.build.outputDir" value="${maven.build.dir}/classes"/>
-  <property name="maven.build.srcDir.0" value="src/java/com/epfo/controller/"/>
+  <property name="maven.build.srcDir.0" value="src/java/com/epfo/controller"/>
   <property name="maven.build.resourceDir.0" value="src/main/resources"/>
   <property name="maven.build.testOutputDir" value="${maven.build.dir}/test-classes"/>
   <property name="maven.build.testDir.0" value="src/test/java"/>
