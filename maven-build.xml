@@ -15,7 +15,7 @@
 <!--                                                                        -->
 <!-- ====================================================================== -->
 
-<!-- <project name="TrialAntProject" default="package" basedir="."> -->
+<project name="TrialAntProject" default="package" basedir=".">
 
   <!-- ====================================================================== -->
   <!-- Build environment properties                                           -->
@@ -246,4 +246,4 @@
          ignoreerrors="true"/>
   </target>
 
-<!-- </project> -->
+</project>
