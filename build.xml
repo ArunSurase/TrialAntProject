@@ -1,45 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="TrialProject" basedir="." default="build">
+<project name="TrialAntProject" default="package" basedir=".">
 
-    <!-- properties -->
-    <property name="src.dir"     value="src"/>
-    <property name="build.dir"   value="build"/>
-    <property name="classes.dir" value="${build.dir}/classes"/>
-    <property name="jar.dir"     value="${build.dir}/jar"/>
-    <property name="doc.dir"     value="doc"/>
+  <!-- ====================================================================== -->
+  <!-- Import maven-build.xml into the current project                        -->
+  <!-- ====================================================================== -->
 
-    <!-- targets -->
-    <target name="compile" description="compile project">
-        <mkdir dir="${classes.dir}"/>
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false"/>
-    </target>
+  <import file="maven-build.xml"/>
+  
+  <!-- ====================================================================== -->
+  <!-- Help target                                                            -->
+  <!-- ====================================================================== -->
 
-    <target name="jar" depends="compile" description="generate the distribution jar">
-        <mkdir dir="${jar.dir}"/>
-        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
-            <manifest>
-                <attribute name="Main-Class" value="piona.Main"/>
-            </manifest>
-        </jar>
-    </target>
-
-    <target name="run" depends="jar" description="run application">
-        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
-    </target>
-
-    <target name="build" depends="jar" description="build application"/>
-
-    <target name="doc" description="generate documentation">
-        <mkdir dir="${doc.dir}" />
-        <javadoc destdir="${doc.dir}" sourcepath="${src.dir}"/>
-    </target>
-
-    <target name="clean" description="clean up build files">
-        <delete dir="${build.dir}"/>
-        <delete dir="${doc.dir}" />
-    </target>
-
-    <target name="rebuild" depends="clean,build" description="rebuild application"/>
-
+  <target name="help">
+    <echo message="Please run: $ant -projecthelp"/>
+  </target>
 </project>
